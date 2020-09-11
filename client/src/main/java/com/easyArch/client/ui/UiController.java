@@ -58,7 +58,8 @@ public class UiController {
                 result.initStyle(item);
             }
             addStage(name, result);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         return result;

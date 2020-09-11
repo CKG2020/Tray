@@ -5,5 +5,5 @@ public class IdContainer {
     public static final String LoginView = "LoginView";
     public static final String MainView="MainView";
     public static  final  String  AddView="AddView";
-    public static  final String  RecommendFriendItem="RecommendFriendItem"
-;}
+    public static  final String  RecommendFriendItem="RecommendFriendItem";
+}

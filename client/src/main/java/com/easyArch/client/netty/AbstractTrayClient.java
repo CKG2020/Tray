@@ -22,6 +22,7 @@ public class AbstractTrayClient implements INettyClient {
         init();
         API object = (API)rpcReferenceBean.getObject();
         Class<?> iface = rpcReferenceBean.getIface();
+        System.out.println("----------------------------");
         System.out.println(iface);
         return object;
     }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Hyperlink?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="270.0" style="-fx-background-color: #e4e4e4;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyArch.client.ui.controller.RecommendViewController">
+	<children>
+		<AnchorPane prefHeight="60.0" prefWidth="270.0" style="-fx-background-color: white;">
+			<children>
+				<ImageView fx:id="min" fitHeight="30.0" fitWidth="30.0" layoutX="241.0" layoutY="-1.0" onMouseClicked="#min" onMouseEntered="#minEntered" onMouseExited="#minExited" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../login/img/min.png" />
+					</image>
+				</ImageView>
+				<ImageView fx:id="close" fitHeight="30.0" fitWidth="30.0" layoutX="271.0" layoutY="2.0" onMouseClicked="#close" onMouseEntered="#closeEntered" onMouseExited="#closeExited" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../login/img/close.png" />
+					</image>
+				</ImageView>
+				<!--<ImageView fx:id="shineImage" fitHeight="91.0" fitWidth="90.0" layoutX="20.0" layoutY="22.0" onMouseClicked="#clicked">-->
+					<!--<image>-->
+						<!--<Image url="@../../login/img/logo.png" />-->
+					<!--</image>-->
+					<!--<cursor>-->
+						<!--<Cursor fx:constant="HAND" />-->
+					<!--</cursor>-->
+				<!--</ImageView>-->
+				<ImageView id="headIcon" fitHeight="50.0" fitWidth="50.0" layoutX="5.0" layoutY="5.0">
+					<image>
+						<Image url="@../../main/img/head.png" />
+					</image>
+				</ImageView>
+
+				<!--<Label fx:id="username" contentDisplay="CENTER" layoutX="158.0" layoutY="45.0" text="username" textFill="BLACK">-->
+					<!--<font>-->
+						<!--<Font size="20.0" />-->
+					<!--</font>-->
+					<!--<padding>-->
+						<!--<Insets bottom="-1.0" left="5.0" right="5.0" top="-1.0" />-->
+					<!--</padding>-->
+				<!--</Label>-->
+
+				<Hyperlink fx:id="userName" layoutX="68.0" layoutY="16.0" text="username"  onMouseClicked="#click" textFill="#000011">
+					<font>
+						<Font size="18.0" />
+					</font>
+				</Hyperlink>
+
+
+			</children>
+		</AnchorPane>
+	</children>
+</Pane>

@@ -81,7 +81,9 @@
 
        <ScrollPane fx:id="friendSp" fitToHeight="true" fitToWidth="true" layoutY="153.0" prefHeight="546.0" prefWidth="300.0">
            <content>
-               <Accordion fx:id="friends" prefHeight="475.0" prefWidth="298.0" />
+              <Accordion fx:id="friends" prefHeight="475.0" prefWidth="298.0"   onMouseClicked="#xxx" >
+
+              </Accordion>
            </content>
        </ScrollPane>
    </children>

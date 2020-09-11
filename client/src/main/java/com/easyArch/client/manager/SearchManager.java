@@ -21,12 +21,12 @@ public class SearchManager {
         return instance;
     }
 
-    public void refreshRecommendFriends(User  user) {
+    public void refreshRecommendFriends(User user) {
         UiController stageController = UiController.getInstance();
         Stage stage = stageController.getStageByName(IdContainer.AddView);
-        ScrollPane   scrollPane = (ScrollPane)stage.getScene().getRoot().lookup("#friendSp");
+        ScrollPane scrollPane = (ScrollPane) stage.getScene().getRoot().lookup("#friendSp");
         Accordion content = (Accordion) scrollPane.getContent();
-          lookUpFriendsContainer(content,user);
+        lookUpFriendsContainer(content, user);
     }
 
     private void lookUpFriendsContainer(Accordion container, User user) {
@@ -35,28 +35,29 @@ public class SearchManager {
 
         UiController uiController = UiController.getInstance();
 
+//        UiController stageController = UiController.getInstance();
+//        Stage stage = uiController.setStage(IdContainer.AddView);
 
-        if (user == null ) {
+        if (user == null) {
 //            // 暂时填充假数据
+            Pane pane = uiController.load(LayoutUi.suggestfriendItem, Pane.class);
+            decorateItem(pane, null);
+            listView.getItems().add(pane);
 
-                    Pane pane = uiController.load(LayoutUi.RecommendFriendItem, Pane.class);
-                    decorateItem(pane, null);
-                    listView.getItems().add(pane);
-
-
-            String  groupInfo="推荐好友"+0;
+            String groupInfo = "推荐好友" + 0;
             TitledPane titledPane = new TitledPane(groupInfo, listView);
             container.getPanes().add(titledPane);
-        }
-        else {
+        } else {
+
+//            UiController stageController = UiController.getInstance();
+//            Stage stage = stageController.getStageByName(IdContainer.RecommendFriendItem);
+
+            Pane pane = uiController.load(LayoutUi.suggestfriendItem, Pane.class);
+            decorateItem(pane, user);
+            listView.getItems().add(pane);
 
 
-                Pane pane = uiController.load(LayoutUi.RecommendFriendItem, Pane.class);
-                decorateItem(pane, user);
-                listView.getItems().add(pane);
-
-
-            String  groupInfo="推荐好友"+1;
+            String groupInfo = "推荐好友" + 1;
             TitledPane titledPane = new TitledPane(groupInfo, listView);
             container.getPanes().add(titledPane);
         }
@@ -69,8 +70,6 @@ public class SearchManager {
 
         Hyperlink usernameUi = (Hyperlink) itemUi.lookup("#userName");
         usernameUi.setText(item == null ? "暂时没有该用户" : item.getUsername());
-
-
 
     }
 
