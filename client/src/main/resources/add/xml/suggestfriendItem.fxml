@@ -24,28 +24,13 @@
 						<Image url="@../../login/img/close.png" />
 					</image>
 				</ImageView>
-				<!--<ImageView fx:id="shineImage" fitHeight="91.0" fitWidth="90.0" layoutX="20.0" layoutY="22.0" onMouseClicked="#clicked">-->
-					<!--<image>-->
-						<!--<Image url="@../../login/img/logo.png" />-->
-					<!--</image>-->
-					<!--<cursor>-->
-						<!--<Cursor fx:constant="HAND" />-->
-					<!--</cursor>-->
-				<!--</ImageView>-->
+
 				<ImageView id="headIcon" fitHeight="50.0" fitWidth="50.0" layoutX="5.0" layoutY="5.0">
 					<image>
 						<Image url="@../../main/img/head.png" />
 					</image>
 				</ImageView>
 
-				<!--<Label fx:id="username" contentDisplay="CENTER" layoutX="158.0" layoutY="45.0" text="username" textFill="BLACK">-->
-					<!--<font>-->
-						<!--<Font size="20.0" />-->
-					<!--</font>-->
-					<!--<padding>-->
-						<!--<Insets bottom="-1.0" left="5.0" right="5.0" top="-1.0" />-->
-					<!--</padding>-->
-				<!--</Label>-->
 
 				<Hyperlink fx:id="userName" layoutX="68.0" layoutY="16.0" text="username"  onMouseClicked="#click" textFill="#000011">
 					<font>

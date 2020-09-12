@@ -57,6 +57,7 @@ public class SearchManager {
             listView.getItems().add(pane);
 
 
+
             String groupInfo = "推荐好友" + 1;
             TitledPane titledPane = new TitledPane(groupInfo, listView);
             container.getPanes().add(titledPane);
