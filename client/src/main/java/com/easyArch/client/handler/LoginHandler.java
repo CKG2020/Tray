@@ -11,13 +11,11 @@ public class LoginHandler implements Handler {
     @Override
     public Object handler(Object object) {
         TrayClient client = TrayClient.getClient();
-        API handler = client.handler();
-        return handler.login((User) object);
+        API handler = client.handler();     //发送rpc请求
+
+        return handler.login((User) object);//执行业务
     }
 
-    @Override
-    public Object handler(Object object1, Object object2) {
-        return null;
-    }
+
 
 }

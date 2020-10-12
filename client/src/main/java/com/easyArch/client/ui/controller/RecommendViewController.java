@@ -1,5 +1,6 @@
 package com.easyArch.client.ui.controller;
 
+import com.easeArch.common.entry.Temp;
 import com.easeArch.common.handler.Handler;
 import com.easyArch.client.handler.HandlerFactory;
 import com.easyArch.client.ui.ControllerStage;
@@ -71,19 +72,20 @@ public class RecommendViewController implements Initializable, ControllerStage {
     @FXML
     public void click() {
         String account = user.getAccount();
-//        String faccount = searchuser.getText();
         System.out.println("---------------------");
         System.out.println(account);
         System.out.println(faccount);
-        insertFriend(account, faccount);
-
+        Temp temp=new Temp();
+        temp.setAccount(account);
+        temp.setFaccount(faccount);
+        insertFriend(temp);
     }
 
 
-    private int insertFriend(String account, String faccount) {
+    private Object insertFriend(Temp temp) {
         HandlerFactory factory = HandlerFactory.getFactory();
         Handler insert = factory.handler("insert");
-        return (int) insert.handler(account, faccount);
+        return  insert.handler(temp);
     }
 
 

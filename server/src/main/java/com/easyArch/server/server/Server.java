@@ -4,6 +4,7 @@ import com.cxl.rpc.remoting.net.params.RpcResponse;
 import com.cxl.rpc.remoting.provider.annotation.RpcService;
 import com.cxl.rpc.util.ChannelUtil;
 import com.easeArch.common.entry.FriendItemVo;
+import com.easeArch.common.entry.Temp;
 import com.easeArch.common.entry.User;
 import com.easeArch.common.enums.StatusCode;
 import com.easeArch.common.res.TrayResponse;
@@ -17,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicReference;
 
 @RpcService
 @Service
@@ -37,7 +37,6 @@ public class Server implements API {
 
 
     public Object login(User user) {
-
         User userByUid = userServer.findUserByUsername(user.getAccount());
         if (null!=userByUid&&userByUid.getAccount().equals(user.getAccount())){
             Channel channel = ChannelUtil.getChannels().getChannel();
@@ -48,7 +47,6 @@ public class Server implements API {
             users.add(user);
             return userByUid;
         }
-
         return StatusCode.ACCOUNT_NOT_MATCH.getCode();
     }
 
@@ -67,6 +65,7 @@ public class Server implements API {
         }
     }
 
+
     public Object registry(User user) {
         boolean register = userServer.register(user);
         if (register){
@@ -75,6 +74,9 @@ public class Server implements API {
 
         return StatusCode.FAIL.getCode();
     }
+
+
+
 
     @Override
     public List<FriendItemVo> friend(String account) {
@@ -89,20 +91,13 @@ public class Server implements API {
             return null;
         }
         return user;
-
     }
 
 
-   @Override
-    public int insertFriend( String  account ,String faccount){
-
-    return  userServer.insertFriend(account, faccount);
-
-
+    @Override
+    public int  insertFriend(Temp temp) {
+        return  userServer.insertFriend(temp.getAccount(),temp.getFaccount());
     }
-
-
-
 
 
 

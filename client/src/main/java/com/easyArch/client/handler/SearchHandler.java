@@ -12,8 +12,5 @@ public class   SearchHandler  implements Handler {
         return handler.searchFriend((String) object);
     }
 
-    @Override
-    public Object handler(Object object1, Object object2) {
-        return null;
-    }
+
 }

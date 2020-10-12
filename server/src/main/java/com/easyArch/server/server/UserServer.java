@@ -1,6 +1,7 @@
 package com.easyArch.server.server;
 
 import com.easeArch.common.entry.FriendItemVo;
+import com.easeArch.common.entry.Temp;
 import com.easeArch.common.entry.User;
 import com.easeArch.common.util.TrayException;
 import com.easyArch.server.mapper.UserMapper;
@@ -41,8 +42,16 @@ public class UserServer {
     }
 
 
+    public  Temp findFriendByFaccount(String faccount){
+        return userMapper.findFriendByFaccount(faccount);
+    }
+
     public int  insertFriend(String account,String faccount){
-        return  userMapper.insertFriend(account,faccount);
+        Temp  temp=findFriendByFaccount(faccount);
+        if (null ==temp) {
+            return  userMapper.insertFriend(account,faccount);
+        }
+        return 0;
     }
 
 

@@ -7,5 +7,5 @@ public interface Handler {
      */
     Object handler(Object object);
 
-    Object handler(Object object1,Object object2);
+
 }

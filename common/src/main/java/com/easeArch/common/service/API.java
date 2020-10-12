@@ -1,6 +1,7 @@
 package com.easeArch.common.service;
 
 import com.easeArch.common.entry.FriendItemVo;
+import com.easeArch.common.entry.Temp;
 import com.easeArch.common.entry.User;
 
 import java.util.List;
@@ -32,5 +33,5 @@ public interface  API {
 
 
 
-    int  insertFriend(String  account ,String faccount);
+    int  insertFriend(Temp temp);
 }

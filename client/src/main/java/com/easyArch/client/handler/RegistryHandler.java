@@ -14,8 +14,5 @@ public class RegistryHandler implements Handler {
         return handler.registry((User) object);
     }
 
-    @Override
-    public Object handler(Object object1, Object object2) {
-        return null;
-    }
+
 }

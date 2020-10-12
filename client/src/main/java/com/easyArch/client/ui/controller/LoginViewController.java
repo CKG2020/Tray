@@ -106,7 +106,6 @@ public class LoginViewController implements Initializable, ControllerStage {
         HandlerFactory factory = HandlerFactory.getFactory();
         Handler send = factory.handler("send");
         return (List<FriendItemVo>) send.handler(name);
-
     }
 
     private Object isObject(String name, String pwd) {

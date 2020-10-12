@@ -16,4 +16,5 @@ public class UserManager {
     public void addUser(User user) {
         this.user = user;
     }
+
 }

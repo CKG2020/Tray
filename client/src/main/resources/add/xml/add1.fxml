@@ -15,7 +15,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
       prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #e4e4e4;"
-      xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.easyArch.client.ui.controller.AddViewController">
+      xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.easyArch.client.ui.controller.AddViewController">
    <children>
       <AnchorPane prefHeight="154.0" prefWidth="300.0" style="-fx-background-color: #169ada;">
          <children>

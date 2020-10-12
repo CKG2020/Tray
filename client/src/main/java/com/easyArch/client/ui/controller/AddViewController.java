@@ -52,7 +52,8 @@ public class AddViewController implements Initializable, ControllerStage {
     @FXML
     private Hyperlink userName;
 
-    static User user;
+
+  protected   static User user;
 
 
     static  String  faccount;
@@ -114,14 +115,16 @@ public class AddViewController implements Initializable, ControllerStage {
 
     @FXML
     private void queryEvent() {
-         faccount = searchuser.getText();
 
+         faccount = searchuser.getText();
         User user = searchFriend(faccount);
         SearchManager.getInstance().refreshRecommendFriends(user);
+
     }
 
 
     private User searchFriend(String account) {
+
         HandlerFactory factory = HandlerFactory.getFactory();
         Handler search = factory.handler("search");
         return (User) search.handler(account);
